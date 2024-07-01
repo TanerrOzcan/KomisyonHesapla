@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+
+<main id="content">
+    <section class="bg-hero2">
+        <div class="bg-hero-left">
+            <div class="bg-hero-left-inner">
+                <div class="bg-hero-left-inner-text position-relative">
+                    <div class="bg-hero-inner-text-story pt-5">
+                       
+                    </div>
+                    <div id="selectMarket" class="selectmarket">
+                        <form>
+                            <div class="form-group">
+                                <div class="row m-0 border-1 border mt-4 rounded-2 rounded">
+                                    <div class="col-md-12 p-md-0">
+                                        <div class="row m-0 pb-2 pt-3 px-md-3">
+
+                                            <div class="col-md-12 ps-md-0 p-0 pb-2 d-flex">
+                                                <p class="mb-0 marketPlaceHolder">Pazar Yeri</p>
+                                                <select id="marketPlaces">
+                                                    <option></option>
+                                                    <option value="1">N11</option>
+                                                   
+                                                    <option value="3">HepsiBurada</option>
+                                                    <option value="4">Trendyol</option>
+                                                    <option value="5">Aliexpress</option>
+                                                    <option value="6">Amazon.com.tr</option>
+                                                    <option value="101">Çiçeksepeti</option>
+                                                    <option value="301">Epttavm</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-12 pe-md-0 p-0 mt-md-0 mt-3 d-flex">
+                                                <p class="mb-0 marketPlaceHolder">Kategori</p>
+                                                <select id="marketCategories">
+                                                    <option></option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row m-0 form-link pb-2 px-md-3">
+                                            <div class="col-md-12 col-12 p-md-0 p-0">
+                                                <div class="d-flex sellingBuyingInputBox">
+
+                                                    <div class="priceBoxes form-floating col-md-6 ">
+                                                        <input type="text" class="form-control" id="sellingPrice"
+                                                               placeholder="name@example.com"/>
+                                                        <label class=""
+                                                               for="floatingInput">Ürün Satış
+                                                            Fiyatı</label>
+                                                    </div>
+
+                                                    <div class="priceBoxes form-floating col-md-6 ps-md-2">
+                                                        <input type="text" class="form-control" id="buyingPrice"
+                                                               placeholder="Ürün Alış Fiyatı"/>
+                                                        <label style="padding-left: 1.4rem" for="floatingInput">Ürün
+                                                            Alış Fiyatı</label>
+                                                    </div>
+
+
+                                                    <div id="wareHousePriceBox" hidden
+                                                         class="form-floating col-md-4 ps-md-2">
+                                                        <input type="text" class="form-control" id="wareHousePrice"
+                                                               placeholder="name@example.com"/>
+                                                        <label style="padding-left: 1.4rem" class=""
+                                                               for="floatingInput">Depoya
+                                                            Gönderim</label>
+                                                    </div>
+
+                                                    <div id="listingPriceBox" hidden
+                                                         class="form-floating col-md-4 ps-md-2">
+                                                        <input type="text" class="form-control" id="listingPrice"
+                                                               placeholder="name@example.com"/>
+                                                        <label style="padding-left: 1.4rem" class=""
+                                                               for="floatingInput">Listeleme
+                                                            Bedeli</label>
+                                                    </div>
+
+                                                    <div id="oppOfDayBox" hidden class="form-floating col-md-4 ps-md-2">
+                                                        <select style="width: 100%;" id="oppOfDay">
+                                                            <option></option>
+                                                            <option value="1">Evet</option>
+                                                            <option value="0">Hayır</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-md-12 col-12 mt-2 p-0">
+                                                <div class="d-flex">
+                                                    <div class="col-md-4 pe-0 form-link mt-md-0 mt-3 p-0">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control" id="commissionRate"
+                                                                   placeholder="name@example.com"/>
+                                                            <label for="floatingInput">Komisyon%</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 pe-0 form-link mt-md-0 mt-3 p-0 ps-md-2">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control" id="kdvRate"
+                                                                   placeholder="name@example.com"/>
+                                                            <label for="floatingInput">KDV%</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 pe-0 form-link mt-md-0 mt-3 p-0 ps-md-2">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control" id="cargoPrice"
+                                                                   placeholder="name@example.com"/>
+                                                            <label for="floatingInput">Kargo Ücreti</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="cargoTypeBox" class="row m-0">
+                                            <div class="col-12 pb-2 px-md-3 p-0">
+                                                <div class="cargo d-flex">
+                                                    <div class="d-md-flex align-items-center w-100">
+                                                        <p >
+                                                            Kargo Tipi:
+                                                        </p>
+                                                        <div class="d-flex py-md-0 py-2">
+                                                      
+                                                            <div class="form-check border-0 m-0 me-3">
+                                                                <input checked class="form-check-input" type="radio"
+                                                                       name="optCargoType" id="optSellerCargo"
+                                                                       value="seller"/>
+                                                                <label class="form-check-label" for="optSellerCargo">
+                                                                    Satıcıya Ait
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check border-0 m-0 me-3">
+                                                                <input class="form-check-input" type="checkbox" id="microExport" name="optCargoType" value="seller"/>
+                                                                <label class="form-check-label" for="optSellerCargo">
+                                                                    Micro İhracat
+                                                                </label>
+                                                            </div>
+                                                          
+                                                        </div>
+
+                                                        <div class="noti ms-auto">
+                                                            *Alış,Satış ve Kargo Fiyatlarına KDV dahil girmeniz gerekmektedir.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="d-flex row flex-row justify-content-between align-items-center">
+
+                                        <div class="col-11 mb-3 mt-3">
+
+                                            <div class="d-grid gap-2">
+                                                <button class="btn btn-primary" onclick="calculateCommission()">Button</button>
+                                              </div>
+
+                                 
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+
+                        <div hidden id="resultsBox" class="form-result mb-4 mt-5 p-3 p-md-0">
+                 
+
+
+                            <div class="row m-0 result-1">
+
+                                <div class="col-md col-12 border-1 border-end border-bottom">
+                                    <p>Komisyon</p>
+                                    <p id="commissionResultValue">6.90₺</p>
+                                </div>
+                                <div hidden id="responseValueBox"
+                                     class="col-md col-12 border-1 border-end border-bottom">
+                                    <p  id="roiText">Yatırım Geri Dönüş Oranı</p>
+                                    <p id="responseRateResultValue">15.00%</p>
+                                </div>
+                                <div hidden id="stdMarkValueBox"
+                                     class="col-md col-12 border-1 border-end border-bottom">
+                                    <p>S. Pazarlama Gideri</p>
+                                    <p id="stdMarketingPrice">0.32₺</p>
+                                </div>
+                                <div hidden id="serviceFeeBox"
+                                     class="col-md col-12 border-1 border-end border-bottom">
+                                    <p>Hizmet Bedeli</p>
+                                    <p id="serviceFeeValue">0.32₺</p>
+                                </div>
+                                <div hidden id="serviceExportFeeBox"
+                                     class="col-md col-12 border-1 border-end border-bottom">
+                                    <p>İhracat Bedeli</p>
+                                    <p id="serviceExportFeeValue">0.32₺</p>
+                                </div>
+                                <div hidden id="wareHouseResultBox"
+                                     class="col-md col-12 border-1 border-end border-bottom">
+                                    <p>Depoya Gönderim Bedeli</p>
+                                    <p id="wareHouseResult">0.32₺</p>
+                                </div>
+
+                                <div hidden id="cSepetiPaymentResultBox"
+                                     class="col-md col-12 border-1 border-end border-bottom">
+                                    <p>ÇS Ödeme Bedeli</p>
+                                    <p id="cSepetiPaymentResult">00</p>
+                                </div>
+
+                                <div hidden id="oppDayValueBox"
+                                     class="col-md col-12 border-1 border-end border-bottom">
+                                    <p>Günün Fırsatı</p>
+                                    <p id="oppDayResultValue">0.32₺</p>
+                                </div>
+
+                                <div class="col-md col-12 border-1 border-end border-bottom">
+                                    <p>Kâr Oranı</p>
+                                    <p id="profitRateResultValue">0.32₺</p>
+                                </div>
+
+                                <div class="col-md col-12 kdv border-1 border-end">
+                                    <p>Kdv</p>
+                                    <p id="kdvResultValue">0.32₺</p>
+                                </div>
+
+
+                                <div class="col-1 position-relative p-md-1 p-0">
+                                    <div class="kdv-circle">
+                                        <p>Kâr</p>
+                                        <p id="profitResultValue">1.78₺</p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row m-0 result-2">
+                                <div class="col-md col-12">
+                                    <p>Satıştan Oluşan KDV</p>
+                                    <p id="expenseFromSales">4.58₺</p>
+                                </div>
+                                <div class="col-md col-12">
+                                    <p>Alıştan Oluşan KDV</p>
+                                    <p id="expenseFromBuying">2.14₺</p>
+                                </div>
+                                <div id="expenseFromCargoBox" class="col-md col-12">
+                                    <p>Kargodan Oluşan KDV</p>
+                                    <p id="expenseFromCargo">1.07₺</p>
+                                </div>
+                                <div id="expenseFromCommissionBox" class="col-md col-12">
+                                    <p>Komisyondan Oluşan KDV</p>
+                                    <p id="expenseFromCommission">1.05₺</p>
+                                </div>
+                                <div hidden id="expenseFromMarketingBox" class="col-md col-12">
+                                    <p>Pazarlama Giderlerinden Oluşan KDV</p>
+                                    <p id="expenseFromMarketing">0.32₺</p>
+                                </div>
+                                <div hidden id="expenseFromOppDayBox" class="col-md col-12">
+                                    <p>Günün Fırsatı Oluşan KDV</p>
+                                    <p id="expenseFromOppDay">0.32₺</p>
+                                </div>
+
+                                <div hidden id="expenseFromServiceFeeBox" class="col-md col-12">
+                                    <p>Hizmet Bedelinden Oluşan KDV</p>
+                                    <p id="expenseFromServiceFee">0.32₺</p>
+                                </div>
+                                <div hidden id="expenseFromExportServiceFeeBox" class="col-md col-12">
+                                    <p>İhracat Bedelinden Oluşan KDV</p>
+                                    <p id="expenseFromExportServiceFee">0.32₺</p>
+                                </div>
+                                <div hidden id="expenseFromWareHouseBox" class="col-md col-12">
+                                    <p>Depoya Gönderim KDV</p>
+                                    <p id="expenseFromWareHouse">0</p>
+                                </div>
+
+                                <div hidden id="expenseFromListingBox" class="col-md col-12">
+                                    <p>Listelemeden Oluşan KDV</p>
+                                    <p id="expenseFromListing">0</p>
+                                </div>
+
+                                <div hidden id="expenseFromCSpaymentBox" class="col-md col-12">
+                                    <p>Ödeme Bedelinden Oluşan KDV</p>
+                                    <p id="expenseFromCSpayment">0</p>
+                                </div>
+
+                                <div class="col-md col-12">
+                                    <p>Ödenecek KDV</p>
+                                    <p id="kdvWillPay">0.32₺</p>
+                                </div>
+                            </div>
+
+                            <div style="background-color: #fff6e7ab" class="row m-0 pt-3">
+                                <div class="col-12 p-0">
+                                    <div hidden style="height: 500px;" id="main">
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                      <script src="app.js"></script>
+</body>
+</html>
