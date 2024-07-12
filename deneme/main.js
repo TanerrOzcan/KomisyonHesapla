@@ -1,6 +1,6 @@
 const chartData = {
-    labels: ["Python", "Java", "JavaScript", "C#", "Others"],
-    data: [30, 17, 10, 7, 36],
+    labels: ["Hizmet Bedeli Maliyeti", "KDV Maliyeti", "Kargo Maliyeti", "Komisyon Maliyeti", "Alış Maliyeti","KÂR"],
+    data: [8.39, 8.62, 5.00, 35.91, 32.00,43.08],
   };
   
   const myChart = document.querySelector(".my-chart");
@@ -39,12 +39,11 @@ const chartData = {
   
   populateUl();
 
-
-  function calculateCommission() {
-    var resultsBox = document.getElementById('resultsBox');
-    if (resultsBox.classList.contains('hidden')) {
-        resultsBox.classList.remove('hidden');
-    } else {
-        resultsBox.classList.add('hidden');
-    }
-  }
+function calculateCommission() {
+  // Burada komisyon hesaplama mantığınızı ekleyin
+  
+  // Sonuç kutusunun görünürlüğünü değiştir
+  var resultsBox = document.getElementById('resultsBox');
+  resultsBox.classList.toggle('hidden');
+  resultsBox.classList.toggle('visible');
+}

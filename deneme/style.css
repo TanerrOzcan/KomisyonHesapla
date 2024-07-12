@@ -93,4 +93,11 @@
         margin: 0 auto;
         margin-top: 4rem !important;
     }
-  
+
+    .hidden {
+      display: none;
+    }
+    .visible {
+      display: block;
+    }
+    
